@@ -9,19 +9,19 @@ This is a simple dragging library for JavaScript.
 * http://aboodman.github.com/dom-drag/ex5.html
 * http://aboodman.github.com/dom-drag/ex6.html
 
-To make an object draggable with DOM-drag, you call Drag.init( ), and pass it a 
+To make an object draggable with DOM-drag, you call `Drag.init( )`, and pass it a 
 reference to the object you want to drag. The function also accepts a whole
 slew of other parameters, but lets not get ahead of ourselves.
 
 If you had this image in your HTML:
 
-```
+```html
 <img id="foo" src="foo.gif" />		
 ```
 
 ... then you could use the following code to make it draggable:
 
-``
+```html
 <script language="javascript">
 	Drag.init(document.getElementById("foo"));
 </script>
@@ -29,17 +29,15 @@ If you had this image in your HTML:
 
 Note:
 
-    * You have to absolutely or relatively position the element you want to be
-      draggable.
-    * You have to position the element inline with the STYLE attribute.
-    * You have to call Drag.init( ) after the element is loaded - either after
-      the element in the source, or in the .onload( ) handler.
+* You have to absolutely or relatively position the element you want to be draggable.
+* You have to position the element inline with the STYLE attribute.
+* You have to call `Drag.init( )` after the element is loaded - either after the element in the source, or in the `.onload( )` handler.
 
 
 You can make one DOM element a "handle" for another DOM element by passing both
-elements to init():
+elements to `init()`:
 
-```
+```html
 <script language="javascript">
 	var theHandle = document.getElementById("handle");
 	var theRoot   = document.getElementById("root");
@@ -57,7 +55,7 @@ to `init()`:
 </script>
 ```
 
-They go in the order: minX, maxX, minY, maxY. If for some reason you only need
+They go in the order: `minX`, `maxX`, `minY`, `maxY`. If for some reason you only need
 to set a few of these, you can set the others to null to tell DOM-Drag that
 motion in that direction should not be constrained.
 
